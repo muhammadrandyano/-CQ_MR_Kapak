@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace PraktikumADO_1
+namespace PraktikumADO
 {
     public partial class Form1 : Form
     {
@@ -19,6 +19,13 @@ namespace PraktikumADO_1
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Koneksi()
+        {
+            conn = new SqlConnection(
+                @"Data Source=DESKTOP-RAM20FI\APRILIYA; Initial Catalog=DBAkademikADO; Integrated Security=True"
+            );
         }
     }
 }
