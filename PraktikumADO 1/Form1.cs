@@ -150,5 +150,14 @@ namespace PraktikumADO
                 MessageBox.Show(ex.Message);
             }
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (conn != null && conn.State == System.Data.ConnectionState.Open)
+            {
+                conn.Close();
+            }
+            base.OnFormClosing(e);
+        }
     }
 }
