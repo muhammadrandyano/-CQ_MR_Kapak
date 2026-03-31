@@ -24,7 +24,7 @@ namespace PraktikumADO
         private void Koneksi()
         {
             conn = new SqlConnection(
-                @"Data Source=DESKTOP-RAM20FI\APRILIYA; Initial Catalog=DBAkademikADO; Integrated Security=True"
+                @"Data Source=MSI\RANDY; Initial Catalog=DBAkademikADO; Integrated Security=True"
             );
         }
 
@@ -139,7 +139,7 @@ namespace PraktikumADO
             {
                 Koneksi();
                 conn.Open();
-                string query = "INSERT INTO ProgramStudi (KodeProdi, NamaProdi) VALUES ('MI01','Manajemen Informatika')";
+                string query = "INSERT INTO ProgramStudi VALUES ('MI01','Manajemen Informatika')";
                 cmd = new SqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Program Studi berhasil ditambahkan.");
